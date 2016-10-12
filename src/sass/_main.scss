@@ -1,0 +1,47 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+	background-color: white;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.start-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	img {
+		transition: 1s;
+		padding: 10px;
+		border: dashed 1px rgba(0,0,0,1);
+		border-radius: 50%;
+		width: 200px;
+		height: auto;
+	}
+	h1 {
+		transition: 1s;
+		text-transform: uppercase;
+		padding: 10px 0;
+		opacity: 0;
+	}
+	&:hover {
+		img {
+			transition: 1s;
+			width: 220px;
+			padding: 5px;
+			border-color: rgba(0,0,0,0);
+			cursor: pointer;
+		}
+		h1 {
+			transition: 1s;
+			opacity: 1;
+		}
+	}
+	
+}
