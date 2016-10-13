@@ -6,10 +6,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
-    jscs = require('gulp-jscs'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish'),
-    sourcemaps = require('gulp-sourcemaps'),
     htmlmin = require('gulp-htmlmin');
 
 var plumberErrorHandler = {
@@ -21,11 +17,17 @@ var plumberErrorHandler = {
 
 var bs = require('browser-sync').create();
 gulp.task('browser-sync', function() {
+  var files = [
+      './build/style.min.css',
+      './build/main.min.js',
+      './build/index.html',
+   ];
     bs.init({
         server: {
             baseDir: "./build"
         }
     });
+    gulp.watch(files).on('change', bs.reload);
 });
 
 gulp.task('sass', function() {
@@ -42,37 +44,24 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function(){
-    gulp.src('./src/*.js')
-      .pipe(sourcemaps.init())
+    gulp.src('./src/main.js')
       .pipe(uglify())
       .pipe(rename({
         extname: '.min.js'
       }))
-      .pipe(sourcemaps.write())
       .pipe(gulp.dest('./build'))
 });
 
-gulp.task('jscs', function () {
-   return gulp.src('./src/*.js')
-       .pipe(jscs('.jscsrc'));
-});
-
-gulp.task('lint', function() {
-  return gulp.src('./src/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-});
-
 gulp.task('htmlmin', function() {
-    return gulp.src('./src/*.html')
+    return gulp.src('./src/index.html')
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('./build'))
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-   gulp.watch('./src/*.html', ['htmlmin']).on('change', bs.reload);
-   gulp.watch('./src/sass/*.scss', ['sass']).pipe(bs.reload({stream: true}));
-   gulp.watch('./src/*.js', ['scripts']).on('change', bs.reload);
+  gulp.watch('./src/sass/*.scss', ['sass']);
+  gulp.watch('./src/*.js', ['scripts']);
+  gulp.watch('./src/*.html', ['htmlmin']).on('change', bs.reload);
 });
 
 gulp.task('default', ['htmlmin', 'sass', 'scripts', 'watch']);

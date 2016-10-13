@@ -1,23 +1,26 @@
 body {
 	font-family: 'Roboto', sans-serif;
+	line-height: 1.5rem;
 }
 
 .main-container {
 	background-color: white;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
+	max-height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: column nowrap;
 }
 
-.start-button {
+.logo-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: column nowrap;
 	img {
-		transition: 1s;
+		transition: 2s;
 		padding: 10px;
 		border: dashed 1px rgba(0,0,0,1);
 		border-radius: 50%;
@@ -25,10 +28,8 @@ body {
 		height: auto;
 	}
 	h1 {
-		transition: 1s;
 		text-transform: uppercase;
 		padding: 10px 0;
-		opacity: 0;
 	}
 	&:hover {
 		img {
@@ -38,10 +39,79 @@ body {
 			border-color: rgba(0,0,0,0);
 			cursor: pointer;
 		}
-		h1 {
-			transition: 1s;
-			opacity: 1;
-		}
 	}
 	
+}
+
+.about-me, .school-container, .experience-container, .projects-container, .contact-container {
+	display: none;
+	width: 700px;
+	padding: 10px;
+	border-bottom: dashed 1px rgba(0,0,0,1);
+	h1 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		border-bottom: dotted 1px rgba(0,0,0,1);
+		padding: 10px 0;
+	}
+}
+
+.fa-heartbeat {
+	color: rgb(255, 101, 211);
+}
+
+.fa-book {
+	color: rgb(188, 119, 0);
+}
+
+.fa-briefcase {
+	color: rgb(100, 100, 100);
+}
+
+.fa-laptop {
+	color: rgb(251, 90, 92);
+}
+
+.fa-phone {
+	color: rgb(50, 108, 255);
+}
+
+.about-me {
+	p {
+		padding: 10px 0;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.school-container {
+	h2 {
+		font-size: 1.2rem;
+		padding: 10px 0;
+	}
+	ul{
+		padding: 10px 0 10px 40px;
+		list-style: circle;
+	}
+}
+
+.navigation {
+	padding: 20px 0;
+	button {
+		margin: 0 10px;
+		background: none;
+		border-width: 1px;
+		padding: 10px;
+		i {
+			font-size: 1.2rem;
+		}
+		&:hover {
+			cursor: pointer;
+			background: black;
+			i {
+				color: white;
+			}
+		}
+	}
 }
