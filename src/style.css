@@ -87,8 +87,7 @@ body {
     transition: 1s;
     width: 220px;
     padding: 5px;
-    border-color: transparent;
-    cursor: pointer; }
+    border-color: transparent; }
 
 .about-me, .school-container, .experience-container, .projects-container, .contact-container {
   display: none;
@@ -154,6 +153,70 @@ body {
   .school-container .skills img {
     width: 50px;
     height: auto; }
+
+.projects-container .project {
+  transition: 2s;
+  padding: 20px 10px;
+  margin: 50px 0;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-align: center;
+      align-items: center; }
+  .projects-container .project h2, .projects-container .project h3, .projects-container .project p {
+    background: white;
+    padding: 5px 20px 5px 20px;
+    margin: 10px 0; }
+  .projects-container .project h2 {
+    font-size: 1.7rem;
+    color: black;
+    text-transform: uppercase; }
+  .projects-container .project h3 {
+    color: black; }
+  .projects-container .project a {
+    color: #fb5a5c; }
+    .projects-container .project a:hover {
+      color: purple; }
+
+.contact-container a {
+  color: #326cff; }
+  .contact-container a:hover {
+    color: purple; }
+
+.contact-container p {
+  padding: 10px; }
+
+.aloha {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/aloha.png);
+  background-position: top center;
+  background-size: cover; }
+
+.nytimes {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/nytimes.png);
+  background-position: top center;
+  background-size: cover; }
+
+.pong {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/pong.png);
+  background-position: top center;
+  background-size: cover; }
+
+.mars {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/mars.png);
+  background-position: top center;
+  background-size: cover; }
+
+.inhabitent {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/inhabitent.png);
+  background-position: top center;
+  background-size: cover; }
+
+.thebixbook {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/thebixbook.png);
+  background-position: top center;
+  background-size: cover; }
 
 .navigation {
   padding: 20px 0; }
