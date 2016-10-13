@@ -47,7 +47,8 @@ table {
 
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  color: #323232; }
 
 .main-container {
   background-color: white;
@@ -115,19 +116,44 @@ body {
 .fa-phone {
   color: #326cff; }
 
+.about-me a {
+  color: #ff65d3; }
+  .about-me a:hover {
+    color: purple; }
+
 .about-me p {
   padding: 10px 0; }
 
 .about-me img {
   width: 100%; }
 
+.school-container a {
+  color: #bc7700; }
+  .school-container a:hover {
+    color: purple; }
+
 .school-container h2 {
-  font-size: 1.2rem;
-  padding: 10px 0; }
+  font-size: 1.2rem; }
+
+.school-container #red-academy-logo {
+  margin: 10px 0;
+  height: 35px; }
 
 .school-container ul {
   padding: 10px 0 10px 40px;
   list-style: circle; }
+
+.school-container .skills {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .school-container .skills img {
+    width: 50px;
+    height: auto; }
 
 .navigation {
   padding: 20px 0; }
