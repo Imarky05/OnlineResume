@@ -3,6 +3,7 @@ $(document).ready(function(){
 	console.log($);
 
 	$('.logo-container').click(function () {
+		$('.navigation').slideToggle(1500);
 		$('.about-me, .school-container, .experience-container, .projects-container, .contact-container').slideUp(1500);
 	});
 

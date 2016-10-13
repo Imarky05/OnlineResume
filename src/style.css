@@ -237,6 +237,7 @@ body {
   background-size: cover; }
 
 .navigation {
+  display: none;
   padding: 20px 0; }
   .navigation button {
     margin: 0 10px;
