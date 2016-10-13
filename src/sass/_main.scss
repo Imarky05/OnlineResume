@@ -30,9 +30,11 @@ body {
 	}
 	h1 {
 		text-transform: uppercase;
+		letter-spacing: 3px;
 		padding: 10px 0;
 	}
 	&:hover {
+		cursor: pointer;
 		img {
 			transition: 1s;
 			width: 220px;
@@ -61,7 +63,7 @@ body {
 }
 
 .fa-book {
-	color: rgb(188, 119, 0);
+	color: rgb(153, 99, 0);
 }
 
 .fa-briefcase {
@@ -93,7 +95,7 @@ body {
 
 .school-container {
 	a {
-		color: rgb(188, 119, 0);
+		color: rgb(153, 99, 0);
 		&:hover {
 			color: purple;
 		}
@@ -118,6 +120,18 @@ body {
 			width: 50px;
 			height: auto;
 		}
+	}
+	.img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column nowrap;
+		p {
+			padding: 10px;
+		}
+	}
+	img.red-prom {
+		width: 100%;
 	}
 }
 

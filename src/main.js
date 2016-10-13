@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 	console.log($);
 
+	$('.logo-container').click(function () {
+		$('.about-me, .school-container, .experience-container, .projects-container, .contact-container').slideUp(1500);
+	});
+
 	$('.about-button').click(function () {
 		$('.school-container, .experience-container, .projects-container, .contact-container').slideUp(1500);
 		$('.about-me').slideToggle(1500);
@@ -19,11 +23,11 @@ $(document).ready(function(){
 
 	$('.projects-button').click(function () {
 		$('.about-me, .school-container, .experience-container, .contact-container').slideUp(1500);
-		$('.projects-container').slideToggle(1500);
+		$('.projects-container').slideToggle(2000);
 	});
 
 	$('.contact-button').click(function () {
-		$('.about-me, school-container, .experience-container, .projects-container').slideUp(1500);
+		$('.about-me, .school-container, .experience-container, .projects-container').slideUp(1500);
 		$('.contact-container').slideToggle(1500);
 	});
 

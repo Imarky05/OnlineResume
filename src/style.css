@@ -82,12 +82,15 @@ body {
     height: auto; }
   .logo-container h1 {
     text-transform: uppercase;
+    letter-spacing: 3px;
     padding: 10px 0; }
-  .logo-container:hover img {
-    transition: 1s;
-    width: 220px;
-    padding: 5px;
-    border-color: transparent; }
+  .logo-container:hover {
+    cursor: pointer; }
+    .logo-container:hover img {
+      transition: 1s;
+      width: 220px;
+      padding: 5px;
+      border-color: transparent; }
 
 .about-me, .school-container, .experience-container, .projects-container, .contact-container {
   display: none;
@@ -104,7 +107,7 @@ body {
   color: #ff65d3; }
 
 .fa-book {
-  color: #bc7700; }
+  color: #996300; }
 
 .fa-briefcase {
   color: #646464; }
@@ -127,7 +130,7 @@ body {
   width: 100%; }
 
 .school-container a {
-  color: #bc7700; }
+  color: #996300; }
   .school-container a:hover {
     color: purple; }
 
@@ -153,6 +156,21 @@ body {
   .school-container .skills img {
     width: 50px;
     height: auto; }
+
+.school-container .img-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap; }
+  .school-container .img-container p {
+    padding: 10px; }
+
+.school-container img.red-prom {
+  width: 100%; }
 
 .projects-container .project {
   transition: 2s;
