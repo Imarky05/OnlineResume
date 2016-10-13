@@ -18,13 +18,13 @@ var plumberErrorHandler = {
 var bs = require('browser-sync').create();
 gulp.task('browser-sync', function() {
   var files = [
-      './build/style.min.css',
-      './build/main.min.js',
-      './build/index.html',
+      './style.min.css',
+      './main.min.js',
+      './index.html',
    ];
     bs.init({
         server: {
-            baseDir: "./build"
+            baseDir: "./"
         }
     });
     gulp.watch(files).on('change', bs.reload);
@@ -40,7 +40,7 @@ gulp.task('sass', function() {
       .pipe(gulp.dest('./src'))
       .pipe(cssnano())
       .pipe(rename('style.min.css'))
-      .pipe(gulp.dest('./build'))
+      .pipe(gulp.dest('./'))
 });
 
 gulp.task('scripts', function(){
@@ -49,13 +49,13 @@ gulp.task('scripts', function(){
       .pipe(rename({
         extname: '.min.js'
       }))
-      .pipe(gulp.dest('./build'))
+      .pipe(gulp.dest('./'))
 });
 
 gulp.task('htmlmin', function() {
     return gulp.src('./src/index.html')
       .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(gulp.dest('./build'))
+      .pipe(gulp.dest('./'))
 });
 
 gulp.task('watch', ['browser-sync'], function() {
