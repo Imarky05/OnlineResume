@@ -1,3 +1,7 @@
+.cytrus {
+	color: white;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.5rem;
@@ -5,7 +9,6 @@ body {
 }
 
 .main-container {
-	background-color: white;
 	width: 100%;
 	min-height: 100vh;
 	max-height: 100%;
@@ -64,23 +67,23 @@ body {
 	}
 }
 
-.fa-heartbeat {
+.fa-heartbeat, .about-color {
 	color: rgb(255, 101, 211);
 }
 
-.fa-book {
+.fa-book, .school-color {
 	color: rgb(153, 99, 0);
 }
 
-.fa-briefcase {
+.fa-briefcase, .experience-color {
 	color: rgb(100, 100, 100);
 }
 
-.fa-laptop {
+.fa-laptop, .projects-color {
 	color: rgb(251, 90, 92);
 }
 
-.fa-phone {
+.fa-phone, .contact-color {
 	color: rgb(50, 108, 255);
 }
 

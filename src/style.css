@@ -45,13 +45,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.cytrus {
+  color: white; }
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5rem;
   color: #323232; }
 
 .main-container {
-  background-color: white;
   width: 100%;
   min-height: 100vh;
   max-height: 100%;
@@ -109,19 +111,19 @@ body {
     border-bottom: dotted 1px black;
     padding: 10px 0; }
 
-.fa-heartbeat {
+.fa-heartbeat, .about-color {
   color: #ff65d3; }
 
-.fa-book {
+.fa-book, .school-color {
   color: #996300; }
 
-.fa-briefcase {
+.fa-briefcase, .experience-color {
   color: #646464; }
 
-.fa-laptop {
+.fa-laptop, .projects-color {
   color: #fb5a5c; }
 
-.fa-phone {
+.fa-phone, .contact-color {
   color: #326cff; }
 
 .about-me a {
